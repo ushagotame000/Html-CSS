@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      input {
+        display: none;
+      }
+      .container {
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 35px;
+        position: relative;
+        margin: 40px 0;
+      }
+      h1::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: crimson;
+        bottom: -10px;
+        left: 580px;
+        transform: translate(-50px -50px);
+        /* transform: translate(-50px); */
+        animation: animate 4s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          width: 100px;
+        }
+        50% {
+          width: 200px;
+        }
+        100% {
+          width: 100px;
+        }
+      }
+      .top-content {
+        background-color: rbg(243, 243, 243);
+        width: 90%;
+        margin: 0 auto 20px auto;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px lightgray;
+      }
+      h3 {
+        height: 100%;
+        background-color: rbg(221, 221, 221);
+        line-height: 60px;
+        padding: 0 50px;
+        color: white;
+      }
+      label {
+        display: inline-block;
+        height: 100%;
+
+        line-height: 60px;
+        font-size: 18px;
+        color: gray;
+        cursor: pointer;
+        transition: color 0.5s;
+        margin: 0 20px;
+      }
+      label:hover {
+        color: black;
+      }
+      .photo-gallery {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+      }
+      .pic {
+        position: relative;
+        height: 230px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px lightgray;
+        cursor: pointer;
+      }
+      .pic img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      .pic::before {
+        content: "photo gallery";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        width: 100%;
+        margin-top: -100px;
+        opacity: 0;
+        transition: 0.3s;
+        transition-delay: 0.2s;
+
+        position: absolute;
+      }
+      .pic::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: 0.3s;
+        z-index: -1;
+      }
+      .pic:hover::after {
+        height: 100%;
+      }
+      .pic:hover::before {
+        margin-top: 0;
+        opacity: 1;
+      }
+      #check1:checked ~ .container.photo-gallery.pic {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+        transition: 0.5s;
+      }
+      #check2:checked ~ .container.photo-gallery.container.photo-gallery.room {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+      }
+      #check3:checked
+        ~ .container.photo-gallery.container.photo-gallery.container.photo-gallery.container.photo-gallery.exterior {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+      }
+      #check2:checked ~ .container.photo-gallery.container.photo-gallery.food {
+        opacity: 0;
+        transform: scale(0);
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photos" id="check1" />
+    <input type="radio" name="photos" id="check2" />
+    <input type="radio" name="photos" id="check3" />
+    <input type="radio" name="photos" id="check4" />
+    <input type="radio" name="photos" id="check5" />
+    <div class="container">
+      <h1>Famous Farm Homestay</h1>
+      <div class="top-content">
+        <h3>photo gallery</h3>
+        <label for="check1">All</label>
+        <label for="check2">Rooms</label>
+        <label for="check3">Foods and Drinks</label>
+        <label for="check4">Exterior</label>
+        <label for="check5">From Viewers</label>
+      </div>
+      <div class="photo-gallery">
+        <div class="pic food">
+          <img src="fo1.jpg" alt="" />
+          <img src="fo2.jpg" alt="" />
+          <img src="fo3.jpg" alt="" />
+          <img src="fo4.jpg" alt="" />
+          <img src="fo5.jpg" alt="" />
+        </div>
+        <div class="pic Exterior">
+          <img src="fex2.jpg" alt="" />
+          <img src="fe3.jpg" alt="" />
+          <img src="fe4.jpg" alt="" />
+          <img src="fex5.jpg" alt="" />
+        </div>
+        <div class="pic room">
+          <img src="froom2.jpg" alt="" />
+          <img src="froom3.jpg" alt="" />
+          <img src="froom4.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

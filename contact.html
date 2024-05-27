@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="contact.css" /> -->
+
+    <title>contact Us</title>
+    <style>
+      .photo img {
+        width: 100vw;
+        height: 80vh;
+      }
+      .form {
+        margin: auto;
+        width: 40%;
+        padding: 20px;
+        border-radius: 35px;
+        border-color: black;
+        display: block;
+        position: relative;
+        left: 239px;
+        margin-top: -62px;
+      }
+
+      body {
+        background-color: lavender;
+      }
+      h1 {
+        text-align: center;
+        font-size: 58px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h2 {
+        text-align: left;
+        color: rgba(0, 0, 0, 0.842);
+      }
+
+      /* Form input fields */
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+      input[type="Phonenumber"],
+      input[type="phone number"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      /* Form label */
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      /* Submit button */
+      input[type="submit"] {
+        background-color: #c057de;
+        padding: 12px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 43px;
+        bottom: -33px;
+        border: aqua;
+        color: lavender;
+      }
+
+      /* Submit button on hover */
+      input[type="submit"]:hover {
+        background-color: #b73fc0;
+      }
+
+      /* Clear button */
+      input[type="reset"] {
+        background-color: #c057de;
+        color: lavender;
+        padding: 12px 20px;
+        border: aqua;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-right: 10px;
+        position: absolute;
+        right: 107px;
+        bottom: -33px;
+      }
+
+      /* Clear button on hover */
+      input[type="reset"]:hover {
+        background-color: #b73fc0;
+      }
+
+      /* Form group */
+      .form-group::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* Form group label */
+      .form-group label {
+        float: left;
+        width: 20%;
+        margin-top: 6px;
+      }
+
+      /* Form group input */
+      .form-group input,
+      .form-group textarea {
+        float: left;
+        width: 80%;
+        margin-top: 6px;
+      }
+      .footer {
+        padding: 45px;
+      }
+      footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #555;
+        height: 12vh;
+      }
+      .information {
+        padding: 0;
+        left: 59px;
+        position: relative;
+      }
+      .information P {
+        padding: 0px;
+      }
+      .information p {
+        padding: 0px;
+      }
+      .info {
+        display: flex;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="photo">
+        <img src="contact_bg-removebg-preview.png" alt="" />
+      </div>
+      <div class="main">
+        <h1>Contact Us</h1>
+        <div class="info">
+          <div class="information">
+            <h2>Information of Hotel</h2>
+            <br />
+            <h3>Phonenumber: +977 9800000000</h3>
+            <br />
+
+            <h3>Mobile number: +977 9800000000</h3>
+            <br />
+            <h3 a href="Orange@hotel.com"></a>E-mail:Orange@hotel.com</h3>
+            <br />
+
+            <h3>Location: Vyas-4 Damauli,Tanahun</h3>
+            <br />
+          </div>
+          <div class="form">
+            <h2>Any Queries? Let Us Know.</h2>
+            <form action="#" method="post" onsubmit=" return validateForm()">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="abc@gmail.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone number">Phone Number:</label>
+                <input
+                  type="phone number"
+                  id="phone number"
+                  name="phone number"
+                  placeholder="1234567890"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="leave your message"
+                ></textarea>
+              </div>
+              <input type="reset" value="cancel" />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <p>&copy; 2023 hotel. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

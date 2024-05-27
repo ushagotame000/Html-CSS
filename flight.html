@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="booking-form-box">
+      <div class="radio-btn">
+        <input type="radio" class="btn" name="check" checked="checked" /><span
+          >One Way</span
+        >
+        <input type="radio" class="btn" name="check" checked="checked" /><span
+          >Multi-city</span
+        >
+        <input type="radio" class="btn" name="check" checked="checked" /><span
+          >Multi-city</span
+        >
+      </div>
+      <div class="booking-form">
+        <label for="">flying Form</label>
+        <input type="text" class="form-control" placeholder="city or Airport" />
+        <label for="">flying to Form</label>
+        <input type="text" class="form-control" placeholder="city or Airport" />
+        <div class="input-grp">
+          <label for="">departing</label>
+          <input type="date" class="form-control select-date" />
+        </div>
+
+        <div class="input-grp">
+          <label for="">Returning</label>
+          <input type="date" class="form-control select-date" />
+        </div>
+
+        <div class="input-grp">
+          <label for="">Adults</label>
+          <input type="date" class="form-control" value="1" />
+        </div>
+        <div class="input-grp">
+          <label for="">Child</label>
+          <input type="date" class="form-control" value="0" />
+        </div>
+        <div class="input-grp">
+          <label for="">Travel Class</label>
+          <select class="custom-select">
+            <option value="1">Economy class</option>
+            <option value="2">Business class</option>
+          </select>
+        </div>
+        <div class="input-grp">
+          <button type="button" class="btn btn-primary flight">
+            Show flight
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

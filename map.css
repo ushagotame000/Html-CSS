@@ -1,0 +1,6 @@
+.map {
+  padding: 4px;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}

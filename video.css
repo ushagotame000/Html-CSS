@@ -1,0 +1,240 @@
+.content {
+  text-align: center;
+}
+.section1 {
+  margin-block: 15px;
+}
+.content h1 {
+  font-size: 160px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+.content a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 14px;
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+/* new */
+nav {
+  line-height: 70px;
+  width: 100%;
+  height: 80px;
+  background: green;
+  margin-top: -14px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-style: bold;
+  font-size: 25px;
+  font-size: 22px;
+  position: relative;
+  display: flex;
+  right: -665px;
+  padding-inline: 9px;
+}
+nav li a:hover {
+  box-shadow: 0 3px 6px rbga(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px);
+  color: orange;
+}
+/* hamburger */
+/* .hamburger {
+  height: 35px;
+  position: fixed;
+  left: 14px;
+  top: 29px;
+  display: inline-block;
+  cursor: pointer;
+  width: 38px;
+  background-color: white;
+  border-radius: 6px;
+} */
+.hamburger img {
+  height: 33px;
+  position: fixed;
+  left: 14px;
+  top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  width: 38px;
+  background-color: white;
+  border-radius: 6px;
+}
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 250px;
+  height: 50%;
+  background-color: white;
+  border-radius: 16px;
+  transition: left 0.3 ease;
+}
+.sidebar-menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 9px;
+  line-height: 14px;
+}
+.sidebar-menu.active {
+  display: block;
+
+  top: 59px;
+  left: 50px;
+  width: 100px;
+  height: 152px;
+  /* background: transparent; */
+  /* background-color: #b3a7a7; */
+}
+
+/* section 2 item card */
+.exp {
+  text-align: center;
+  font-size: 24px;
+  margin-block: 15px;
+  background: white;
+  padding-top: 2px;
+  font-family: sans-serif;
+  text-decoration-color: #9a9191;
+}
+.gallery {
+  display: inline;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.item {
+  width: 20%;
+  margin: 28px;
+  height: 20%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.23);
+  transition: 0.4s;
+  background: rgb(242, 240, 240);
+}
+.item:hover {
+  box-shadow: 0 3px 6px rbga(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+p {
+  text-align: center;
+  color: rgb(42, 30, 30);
+  padding-top: 0 8px;
+}
+p {
+  font-size: 22px;
+  text-align: center;
+  color: #222f3e;
+  margin: 3px;
+}
+
+.item ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.item a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+button {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-top: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.book-1 {
+  background: #2183a2;
+}
+.book-2 {
+  background: #3b3e6e;
+}
+.book-3 {
+  background: #0b0b0b;
+}
+
+.book-4 {
+  background: #ff9f43;
+}
+
+/* footer-section4 */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  height: 12vh;
+}
+
+@media (max-width: 1000px) {
+  .item {
+    width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .item {
+    width: 100%;
+  }
+}

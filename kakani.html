@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="map.css" />
+    <link rel="stylesheet" href="next.css">
+  </head>
+  <body>
+      <div class="container">
+            <div class="gallery">
+      <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="Rooms ">Rooms</li>
+        <li class="buttons" data-filter="Exterior ">Exterior</li>
+        <li class="buttons" data-filter="Foods ">Foods</li>
+        <li class="buttons" data-filter="map ">Map</li>
+      </ul>
+      <div class="image-container">
+        <a href="kakaniroom1.jpg" class="image Rooms">
+          <img src="kakaniroom1.jpg" alt="" />
+        </a>
+        <a href="kakaniroom2.jpg" class="image Rooms">
+          <img src="kakaniroom2.jpg" alt="" />
+        </a>
+        <a href="kakaniroom3.jpg" class="image Rooms">
+          <img src="kakaniroom3.jpg" alt="" />
+        </a>
+        <a href="kakanifood1.jpg" class="image Foods">
+          <img src="kakanifood1.jpg" alt="" />
+        </a>
+        <a href="kakanifood2.jpg" class="image Foods">
+          <img src="kakanifood2.jpg" alt="" />
+        </a>
+        <a href="kakanifood3.jpg" class="image Foods">
+          <img src="kakanifood3.jpg" alt="" />
+        </a>
+        <a href="fo4.jpg" class="image Foods">
+          <img src="fo4.jpg" alt="" />
+        </a>
+        <a href="fo5.jpg" class="image Foods">
+          <img src="fo5.jpg" alt="" />
+        </a>
+        <a href="kakaniex1.jpg" class="image Exterior">
+          <img src="kakaniex1.jpg" alt="" />
+        </a>
+        <a href="kakaniex2.jpg" class="image Exterior">
+          <img src="kakaniex2.jpg" alt="" />
+        </a>
+        <a href="kakaniex3.jpg" class="image Exterior">
+          <img src="kakaniex3.jpg" alt="" />
+        </a>
+        <a href="kakaniex4.jpg" class="image Exterior">
+          <img src="kakaniex4.jpg" alt="" />
+        </a>
+        <a href="kakaniex5.jpg" class="image Exterior">
+          <img src="kakaniex5.jpg" alt="" />
+        </a>
+       
+      </div>
+                      <div class="map">
+          <iframe
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14114.028795080205!2d85.2004595!3d27.824936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb21140ec82283%3A0x1c8074bdfd97ab14!2sKakani%20Friday%20Home%20Stay%20and%20Organic%20Farm!5e0!3m2!1sen!2snp!4v1680237403720!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          ></iframe>
+        </div>
+
+    </div>
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- magnific popup js cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".buttons").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+          var filter = $(this).attr("data-filter");
+          if (filter == "all") {
+            $(".image").show(400);
+          }
+
+          $(".image")
+            .not("." + filter)
+            .hide(200);
+          $(".image")
+            .filter("." + filter)
+            .show(400);
+        });
+      });
+    </script>
+
+      </div>
+    </div>
+  </body>
+</html>

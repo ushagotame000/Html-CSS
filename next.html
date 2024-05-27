@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- magnific-popup css sdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <link rel="stylesheet" href="next.css " />
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="Rooms ">Rooms</li>
+        <li class="buttons" data-filter="Exterior ">Exterior</li>
+        <li class="buttons" data-filter="Foods ">Foods</li>
+      </ul>
+      <div class="image-container">
+        <a href="froom2.jpg" class="image Rooms">
+          <img src="froom2.jpg" alt="" />
+        </a>
+        <a href="froom3.jpg" class="image Rooms">
+          <img src="froom3.jpg" alt="" />
+        </a>
+        <a href="froom4.jpg" class="image Rooms">
+          <img src="froom4.jpg" alt="" />
+        </a>
+        <a href="fo1.jpg" class="image Foods">
+          <img src="fo1.jpg" alt="" />
+        </a>
+        <a href="fo2.jpg" class="image Foods">
+          <img src="fo2.jpg" alt="" />
+        </a>
+        <a href="fo3.jpg" class="image Foods">
+          <img src="fo3.jpg" alt="" />
+        </a>
+        <a href="fo4.jpg" class="image Foods">
+          <img src="fo4.jpg" alt="" />
+        </a>
+        <a href="fo5.jpg" class="image Foods">
+          <img src="fo5.jpg" alt="" />
+        </a>
+        <a href="fex2.jpg" class="image Exterior">
+          <img src="fex2.jpg" alt="" />
+        </a>
+        <a href="fex5.jpg" class="image Exterior">
+          <img src="fex5.jpg" alt="" />
+        </a>
+        <a href="fe3.jpg" class="image Exterior">
+          <img src="fe3.jpg" alt="" />
+        </a>
+        <a href="fe4.jpg" class="image Exterior">
+          <img src="fe4.jpg" alt="" />
+        </a>
+        <a href="fe5.jpg" class="image Exterior">
+          <img src="fe5.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- magnific popup js cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".buttons").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+          var filter = $(this).attr("data-filter");
+          if (filter == "all") {
+            $(".image").show(400);
+          }
+
+          $(".image")
+            .not("." + filter)
+            .hide(200);
+          $(".image")
+            .filter("." + filter)
+            .show(400);
+        });
+      });
+    </script>
+  </body>
+</html>

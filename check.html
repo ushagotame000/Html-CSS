@@ -1,0 +1,73 @@
+ <div class="checkbox">
+          <div class="in">
+            <div class="write">Check In</div>
+            <input type="date" />
+          </div>
+          <div class="out">
+            <div class="write">Check Out</div>
+            <input type="date" />
+            <div class="guest"></div>
+            <input
+              type="number"
+              name="Guest"
+              id="Guest"
+              min="1"
+              max="17"
+              placeholder="Guest"
+            />
+          </div>
+        </div>
+      </div>
+   <style>
+    .checkbox {
+      padding: 0;
+      display: flex;
+      float: right;
+      margin-top: 95px;
+      background-color: lavenderblush;
+      height: 100px;
+      margin-right: 144px;
+    }
+    .in {
+      padding: 0;
+      background: rgb(81, 217, 81);
+      height: 35px;
+      margin-right: 3px;
+    }
+
+    .out {
+      padding: 0;
+      background: rgb(234, 35, 35);
+      height: 35px;
+      width: 120px;
+    }
+    .write {
+      padding: 0;
+      text-align: center;
+    }
+    .guest {
+      padding: 0;
+    }
+    input[type="number"] {
+      padding: 0;
+      margin-left: -88px;
+      margin-top: 19px;
+    }
+    input[type="placeholder"] {
+      color: black;
+      background-color: aquamarine;
+    }
+
+    .footer {
+      padding: 45px;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      height: 12vh;
+    }
+   
+   </style>

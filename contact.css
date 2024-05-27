@@ -1,0 +1,93 @@
+body {
+  background-color: lavender;
+}
+.container {
+  margin: auto;
+  width: 40%;
+  padding: 20px;
+  background-color: #c46bdd7d;
+
+  box-shadow: 0px 0px 10px 2px rgb(176, 52, 202);
+  border-radius: 35px;
+}
+h2 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.842);
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Form label */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: #c057de;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 461px;
+  bottom: 73px;
+  border: aqua;
+  color: lavender;
+}
+
+/* Submit button on hover */
+input[type="submit"]:hover {
+  background-color: #b73fc0;
+}
+
+/* Clear button */
+input[type="reset"] {
+  background-color: #c057de;
+  color: lavender;
+  padding: 12px 20px;
+  border: aqua;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  position: absolute;
+  right: 483px;
+  bottom: 73px;
+}
+
+/* Clear button on hover */
+input[type="reset"]:hover {
+  background-color: #b73fc0;
+}
+
+/* Form group */
+.form-group::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Form group label */
+.form-group label {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+/* Form group input */
+.form-group input,
+.form-group textarea {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
